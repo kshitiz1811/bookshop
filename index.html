@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>E-Newspaper</title>
+  </head>
+  <body>
+    <h1 id="headline">Headline</h1>
+    <p id="content">Content</p>
+    <p id="author">Author</p>
+
+    <h2>Advertisements</h2>
+    <div id="advertisements">
+      <p>Advertisement 1</p>
+      <p>Advertisement 2</p>
+      <p>Advertisement 3</p>
+    </div>
+
+    <button id="change-headline-button">Change Headline</button>
+    <button id="change-content-button">Change Content</button>
+    <button id="change-author-button">Change Author</button>
+    <button id="customize-ads-button">Customize Ads</button>
+
+    <script>
+      // Get references to the DOM elements
+      var headline = document.getElementById("headline");
+      var content = document.getElementById("content");
+      var author = document.getElementById("author");
+      var advertisements = document.getElementById("advertisements");
+      var changeHeadlineButton = document.getElementById("change-headline-button");
+      var changeContentButton = document.getElementById("change-content-button");
+      var changeAuthorButton = document.getElementById("change-author-button");
+      var customizeAdsButton = document.getElementById("customize-ads-button");
+
+      // Add event listeners to the buttons
+      changeHeadlineButton.addEventListener("click", function() {
+        // Change the headline
+        headline.innerHTML = "New Headline";
+      });
+      changeContentButton.addEventListener("click", function() {
+        // Change the content
+        content.innerHTML = "New Content";
+      });
+      changeAuthorButton.addEventListener("click", function() {
+        // Change the author
+        author.innerHTML = "New Author";
+      });
+      customizeAdsButton.addEventListener("click", function() {
+        // Customize the advertisements
+        advertisements.innerHTML = "";
+        advertisements.innerHTML += "<p>Customized Advertisement 1</p>";
+        advertisements.innerHTML += "<p>Customized Advertisement 2</p>";
+        advertisements.innerHTML += "<p>Customized Advertisement 3</p>";
+      });
+    </script>
+  </body>
+</html>
